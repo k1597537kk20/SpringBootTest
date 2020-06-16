@@ -14,7 +14,7 @@ import com.jhang.demo.parameter.ProductQueryParameter;
 import com.jhang.demo.service.ProductService;
 
 @RestController
-@RequestMapping(value = "/product", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(value = "/products", produces = MediaType.APPLICATION_JSON_VALUE)
 public class ProductController {
 
     @Autowired

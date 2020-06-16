@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.vincent</groupId>
+    <groupId>com.jhang</groupId>
     <artifactId>springboot</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
@@ -31,44 +31,13 @@
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
         </dependency>
 
-    
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.12</version>
-        </dependency>
-    
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test</artifactId>
-            <version>2.1.7.RELEASE</version>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
         </dependency>
-    
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-test</artifactId>
-            <version>5.1.9.RELEASE</version>
-        </dependency>
-    
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-test-autoconfigure</artifactId>
-            <version>1.5.22.RELEASE</version>
-        </dependency>
-    
-        <dependency>
-            <groupId>org.json</groupId>
-            <artifactId>json</artifactId>
-            <version>20190722</version>
-        </dependency>
-    </dependencies>
 
-    <!-- MockMvc --> 
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-test</artifactId>
-        <scope>test</scope>
-    </dependency>
+    </dependencies>
 
     <build>
         <plugins>
@@ -80,11 +49,5 @@
 
         </plugins>
     </build>
-
-    <dependency>
-        <groupId>org.springframework.data</groupId>
-        <artifactId>spring-data-mongodb</artifactId>
-        <version>3.0.1.RELEASE</version>
-    </dependency>
 
 </project>

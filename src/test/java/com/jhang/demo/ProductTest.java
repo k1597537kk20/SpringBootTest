@@ -16,6 +16,8 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.*;
 
+
+
 @RunWith(SpringRunner.class)
 @SpringBootTest
 @AutoConfigureMockMvc
@@ -27,7 +29,7 @@ public class ProductTest {
     @Test
     public void testCreateProduct() throws Exception{
         HttpHeaders httpHeaders = new HttpHeaders();
-        httpHeaders.add("Content-Type", "application/json");
+        httpHeaders.add("Content-Type", "application/json; charset=UTF-8;");
 
         JSONObject request = new JSONObject();
         request.put("name", "Harry Potter");
@@ -46,7 +48,7 @@ public class ProductTest {
             .andExpect(jsonPath("$.name").value(request.getString("name")))
             .andExpect(jsonPath("$.price").value(request.getInt("price")))
             .andExpect(header().exists("Location"))
-            .andExpect(header().string("Content-Type", "application/json;charset=UTF-8"));
+            .andExpect(header().string("Content-Type","application/json;charset=UTF-8;"));
     }
 
 }
